@@ -62,17 +62,27 @@ make_avg(numbers , length);
 // ● No return + Has parameter
 
 
-function odd_even(number){
-    if(number%2==0){
-        return "This Is a Odd Number"
-    }
-    else{
-        return "Its an Even Number"
-    }
-}
+// function odd_even(number){
+//     if(number%2==0){
+//         return "This Is a Even Number"
+//     }
+//     else{
+//         return "Its an Odd Number"
+//     }
+// }
 
-var result = odd_even(5);
-console.log(result);
+// var result = odd_even(5);
+// console.log(result);
+var number ="5";
+function odd_even(){
+    if(number%2==0){
+                return "This Is a Even Number"
+            }
+            else{
+                return "Its an Odd Number"
+            }
+        }
+
 
 
 
@@ -82,7 +92,32 @@ console.log(result);
 // coloured traffic signal, you should cross the road. So write a JS code, where there is a
 // variable called signal. Its value can be green, yellow or red & we will get different activities as
 // output depending on the variable. So, hurry up.
+var signal;
+if(signal =='red'){
+    console.log('you may be in danger')
+}else if(signal =="yellow"){
+    console.log('You should stop')
+}
+else if(signal =="green"){
+    console.log('You can cross the road')
+}
+else{
+    console.log("please look at the signal")
+}
 
+switch(signal){
+    case 'red':
+        console.log('you may be in danger');
+        break
+    case 'yellow':
+        console.log('You should stop')
+        break
+    case 'green':
+        console.log('You can cross the road')
+        break;
+        default:
+            console.log("please look at the signal")
+}
 
 // —--------------
 
@@ -92,24 +127,45 @@ console.log(result);
 
 // ১. একটা ফাংশন লিখবা যেটা ১৩ এর নামতা (multiplication table) আউটপুট হিসেবে দেখাবে। 
 
+function tableThirteen(){
+    var total=1;;
+    for(i=1; i<=10; i++){
+        result = 13*i;
+        console.log(result)
+    }
+   
+}
+
+tableThirteen()
 
 
 // ২. একটা ফাংশন লিখবা যেটা যেকোন নামকে uppercase বা রেগুলার কেইস হিসেবে নিবে আর আউটপুট হিসেবে সেই নাম lowercase করে রিটার্ন করবে।
+
+function lowercase(name){
+    return name.toLowerCase();
+}
+
+console.log(lowercase("SAAD"));
 
 
 
 // ৩. fullName নামে একটা ফাংশন তৈরী কর যেটা তোমার নামের প্রথম অংশ এবং তোমার নামের শেষের অংশ প্যারামিটার হিসেবে নিবে। আর তোমার নামের দুই অংশ জোড়া দিয়ে আউটপুট হিসেবে তোমার পূর্ন নাম রিটার্ন করে দিবে। যেমন ধরো, hablu এবং kanto ইনপুট প্যারামিটার হিসেবে দিলে আউটপুট হিসেবে hablu kanto রিটার্ন করবে। 
 
+function fullName(firstname , lastname){
+    return firstname +" "+ lastname;
+}
 
-
+console.log(fullName('Abul' , 'Hasnat'));
 // ৪. একটা ফাংশন লিখবা যেটাকে তুমি কোন সংখ্যাকে ইনপুট হিসেবে দিলে সে সেই সংখ্যার square করে সেই square কে রিটার্ন করবে।
 
 // অর্থাৎ তুমি ইনপুট হিসেবে 5 দিলে সেটাতে স্কয়ারে হিসেবে 25 আউটপুট হিসেবে পাবে।  
 
+function square(number){
+    return number*number;
+}
 
 
-
-
+console.log(square(7));
 
 
 // —----------
@@ -133,3 +189,15 @@ console.log(result);
 // }
 
 // এবং pepperoni প্রিন্ট করবা।
+
+const pizza = {
+
+ toppings: ['cheese', 'sauce', 'pepperoni'],
+
+ crust: 'deep dish',
+
+ serves: 2
+}
+
+var item = pizza.toppings[2];
+console.log(item);
